@@ -800,8 +800,9 @@ function sparqlExample(i) {
 
 <body>
 <div class="main">
+    <a href="https://www.dbpedia-spotlight.org">
     <img id="logo" height="129" src="dbpedia_spotlight_logo.jpg" />
-
+    </a>
 
     <div id="action_container" class="container">
 
@@ -849,36 +850,18 @@ function sparqlExample(i) {
     <div id=suggestdialog></div>
 
     <div id="instructions" class="container">
-        <p style="text-align: center;">This demo uses the statistical DBpedia Spotlight web service at <span id="webservice">http://spotlight.sztaki.hu:2222/rest</span>.</p>
+	    <p style="text-align: center; font-size: 140%">This demo uses the statistical <a href="https://www.dbpedia-spotlight.org">DBpedia-Spotlight</a> web service at <span id="webservice">http://spotlight.sztaki.hu:2222/rest</span>.</p>
         
         <p style="text-align: center; font-size: 150%; font-weight: bold;"><a href="https://github.com/dbpedia-spotlight/dbpedia-spotlight#citation">How to cite this work</a></p>
     
         <h2>You should know:</h2>
         <ul>
-            <li style="color: black; font-weight: bold;">These demos do not support HTTPS, please switch to the <a href="http://dbpedia-spotlight.github.io/demo/">http version</a> if they don't work in your browser.</li>
-            <li>This interface has been tested with Firefox 6.0.2 and Chromium 12.0.</li>
-            <li>We have a cute <a id="bookmarklet_link" href="#bookmarklet_container">bookmarklet</a> that you should try out!</li>
+		<li style="color: black; font-size: 125%">This demo make use of the DBpedia-Spotlight <a href="https://hub.docker.com/r/dbpedia/dbpedia-spotlight">Docker version</a>, available in the docker hub repository.</li>
+	    <li style="color: black; font-size: 125%;">The <a href="https://databus.dbpedia.org/dbpedia/spotlight/spotlight-model/">language models</a>, used in this demo page, are available in the Databus platform.</li>
+	    <li style="color: black; font-size: 125%">Also, for each language is available the <a href="https://databus.dbpedia.org/dbpedia/spotlight/spotlight-wikistats">Wikipedia statistics</a>, extracted from dump files, in the Databus platform. 
         </ul>
     </div>
 
-    <div id="bookmarklet_container" class="container">
-        <div>
-            <br/>
-            Tired of copying and pasting text here?<br/>
-            Drag the box "Annotate with DBpedia Spotlight" below to your bookmarks bar (Or right-click and "Bookmark this link").
-            After doing that, simply select text in any page and click on the bookmark you've just saved to your bookmarks bar.
-            That will send the text you've selected to DBpedia Spotlight and take you to the annotated text in a blink!
-            <div class="bookmarklet">
-                <p>
-                    <a href="javascript:function se(d) {return d.selection ? d.selection.createRange().text : d.getSelection()} s = se(document); for (i=0; i<frames.length && !s; i++) s = se(frames[i].document); if (!s || s=='') s = prompt('Enter%20text%20to%20annotate%20with%20DBpedia%20Spotlight',''); open('http://dbpedia-spotlight.github.com/demo/index.html' + (s ? '?execute=yes&client=bookmarklet&text=' + encodeURIComponent(s) : '')).focus();">
-                        Annotate with DBpedia Spotlight
-                    </a>
-                </p>
-            </div>
-
-
-        </div>
-    </div>
 
     <div id="type_selector">
         <div id="filterPolicy">
