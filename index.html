@@ -757,19 +757,6 @@ $(document).ready(function() {
         }
     });
 
-    $("#bookmarklet_container").hide();
-    $("#bookmarklet_link").click(function(event) { $("#bookmarklet_container").show().dialog({
-        dialogClass: 'alert',
-        width: 700,
-        height: 200,
-        modal: true,
-        position: ['center', 50],
-        title : "Bookmarklet"
-      });
-    });
-
-
-
     if (execute) {
         runWithSettings();
     }
