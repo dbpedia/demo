@@ -365,7 +365,7 @@ var res_prefix = 'http://dbpedia.org/resource/'
 function select_language(uri, text, lang) {
     $('#text').val(text);
     $('#webservice').text(uri);
-    
+    $('#apiurl').attr("href","https://www.dbpedia-spotlight.org/api/"+lang); 
     server = uri;
 
     if (lang == "en")
@@ -837,7 +837,7 @@ function sparqlExample(i) {
     <div id=suggestdialog></div>
 
     <div id="instructions" class="container">
-	    <p style="text-align: center; font-size: 120%">This demo uses the statistical <a href="https://www.dbpedia-spotlight.org">DBpedia-Spotlight</a> web service at <a href="https://www.dbpedia-spotlight.org/api"><span id="webservice">http://spotlight.sztaki.hu:2222/rest</span></a>.</p>
+	    <p style="text-align: center; font-size: 120%">This demo uses the statistical <a href="https://www.dbpedia-spotlight.org">DBpedia-Spotlight</a> web service at <a href="https://www.dbpedia-spotlight.org/api" id="apiurl"><span id="webservice">http://spotlight.sztaki.hu:2222/rest</span></a>.</p>
         
         <p style="text-align: center; font-size: 150%; font-weight: bold;"><a href="https://github.com/dbpedia-spotlight/dbpedia-spotlight#citation">How to cite this work</a></p>
     
