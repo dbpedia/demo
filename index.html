@@ -365,10 +365,10 @@ var res_prefix = 'http://dbpedia.org/resource/'
 function select_language(uri, text, lang) {
     $('#text').val(text);
     $('#webservice').text(uri);
-    if (lang == "en" || lang == "nl" || lang == "it" || lang == "fr" || lang == "pt" || lang == "de" || lang == "es")
-    	$('#apiurl').attr("href","https://www.dbpedia-spotlight.org/api/"+lang); 
-    else
-    	$('#apiurl').attr("href","https://api.dbpedia-spotlight.org"); 
+//    if (lang == "en" || lang == "nl" || lang == "it" || lang == "fr" || lang == "pt" || lang == "de" || lang == "es")
+    $('#apiurl').attr("href","https://www.dbpedia-spotlight.org/api/"+lang); 
+//    else
+//    	$('#apiurl').attr("href","https://api.dbpedia-spotlight.org"); 
 	
     server = uri;
 
